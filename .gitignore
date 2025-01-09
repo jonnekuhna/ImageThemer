@@ -31,5 +31,13 @@
 *.out
 *.app
 
-#program database files
+# Build artifacts
 *.pdb
+*.ilk
+*.ipch
+*.log
+
+# IDE/workspace files
+.vscode/
+*.vcxproj.user
+*.suo
