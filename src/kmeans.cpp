@@ -11,7 +11,6 @@ static double pixelDistance(const pixel &p, const centroid &c) {
     return dr*dr + dg*dg + db*db;
 }
 
-// Randomly pick initial centroids from the pixels
 static std::vector<centroid> initializeCentroids(const std::vector<pixel> &pixels, int K) {
     std::vector<centroid> centroids;
     centroids.reserve(K);
@@ -27,7 +26,6 @@ static std::vector<centroid> initializeCentroids(const std::vector<pixel> &pixel
     return centroids;
 }
 
-// Definition matches kMeans(...) from kmeans.h (no default here, just in .h)
 std::vector<centroid> kMeans(const std::vector<pixel> &pixels, int K, int maxIterations) {
     auto centroids = initializeCentroids(pixels, K);
     std::vector<int> labels(pixels.size(), -1);
